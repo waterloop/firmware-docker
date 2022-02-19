@@ -16,6 +16,7 @@ Run the `install_docker.sh` script.
 
 ```bash
 cd /path/to/firmware-docker
+chmod +x install_docker.sh
 ./install_docker.sh
 ```
 
@@ -34,6 +35,7 @@ Install docker desktop [here](https://www.docker.com/products/docker-desktop).
 Run the `setup.sh` script.
 
 ```bash
+chmod +x setup.sh
 ./setup.sh
 ```
 
