@@ -1,6 +1,7 @@
 FROM ubuntu:20.04
 
 RUN apt update
+RUN apt update --fix-missing
 RUN apt install -y sudo
 RUN apt install -y openssh-server
 RUN apt install -y language-pack-en
