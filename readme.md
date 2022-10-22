@@ -1,39 +1,11 @@
 ## Firmware Docker Container
 
-This repository contains a dockerfile to build the standard development environment used by the firmware team to develop firmware.
+This repo contains the docker file which we will use for executing git hub actions to verify that PRs build before we merge them
 
-### Installation
-
-```bash
-git clone https://github.com/waterloop/firmware-docker.git
+To run this container use the following command:
 ```
-
-### Docker Installation
-
-**Debian-Based Linux**
-
-Run the `install_docker.sh` script.
-
-```bash
-cd /path/to/firmware-docker
-./install_docker.sh
+docker run --rm \
+          -v $(pwd):/firmware \
+          waterloop-firmware $*
 ```
-
-**MacOS**
-
-Install docker desktop [here](https://www.docker.com/products/docker-desktop).
-
-**Windows**
-
-Setup [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install).
-
-Install docker desktop [here](https://www.docker.com/products/docker-desktop).
-
-### Usage
-
-Run the `setup.sh` script.
-
-```bash
-./setup.sh
-```
-
+and replace `$*` with the python script that you would like to run
